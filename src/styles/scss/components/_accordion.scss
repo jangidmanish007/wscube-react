@@ -1,0 +1,108 @@
+.faq-accordion {
+  .accordion-item {
+    &:nth-last-child(1) {
+      border-bottom: 1px solid var(--label-color-2);
+    }
+    border: none;
+    border-bottom: 1px solid var(--label-color-1);
+    .accordion-header {
+      .accordion-button {
+        padding: 20px 0px;
+        border-radius: 0px;
+        border-bottom: none;
+        background: var(--label-color-white);
+        box-shadow: none;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        color: var(--base-color);
+        &:after {
+          width: 24px;
+          height: 26px;
+          border-radius: 100%;
+          background: url('/images/icons/minus-circle-icon.svg') no-repeat center / contain !important;
+        }
+      }
+      .accordion-button.collapsed {
+        border-radius: 0px;
+        background: white;
+        &:after {
+          width: 24px;
+          height: 26px;
+          border-radius: 100%;
+          background: url('/images/icons/plus-circle-icon.svg') no-repeat center / contain !important;
+        }
+      }
+    }
+    .faq-body {
+      p,
+      span,
+      a,
+      ul,
+      em {
+        color: var(--label-color-1) !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 21px;
+        margin-bottom: 0px;
+      }
+      p {
+        margin-bottom: 8px;
+      }
+    }
+    &:last-of-type {
+      border-radius: 0px;
+    }
+  }
+}
+
+.syllabus-curriculum-accordion {
+  .accordion-item {
+    border: 2px solid var(--label-color-1) !important;
+    border-radius: 24px !important;
+    .accordion-header {
+      .accordion-button {
+        border-radius: 24px !important;
+      }
+      .accordion-button {
+        padding: 28px;
+        border-radius: 24px;
+        border-bottom: none;
+        background: var(--label-color-white);
+        box-shadow: none;
+        color: var(--base-color);
+        &:after {
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          background: url('/images/icons/collapsed-arrow-icon.svg') no-repeat center / contain !important;
+        }
+      }
+      .accordion-button.collapsed {
+        border-radius: 24px;
+        background: white;
+        &:after {
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          background: url('/images/icons/collapsed-arrow-icon.svg') no-repeat center / contain !important;
+        }
+      }
+    }
+  }
+  .active-item {
+    box-shadow: 4px 4px 0px 0px #111827;
+  }
+}
+
+@media (max-width: 991px) {
+  .syllabus-curriculum-accordion {
+    .accordion-item {
+      .accordion-header {
+        .accordion-button {
+          padding: 22px;
+        }
+      }
+    }
+  }
+}

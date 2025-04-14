@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+.contact-banner {
+  background: url('/images/master-class/master-banner-checks.svg') no-repeat center,
+    url('/images/categories/noise.png') repeat, linear-gradient(256.99deg, #002ccd 19.72%, #000825 97.05%),
+    linear-gradient(180deg, #0834d8 0%, rgba(25, 76, 255, 0) 100%);
+  background-blend-mode: color-dodge;
+}
+.contact-skill-center {
+  .cotact-center-row {
+    margin-top: -170px;
+    .skill-cen-card {
+      h3 {
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-size: 38px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+.contact-online-course {
+  .contact-online-left {
+    background: linear-gradient(184.97deg, #002ccd -1.81%, #000825 113.82%);
+    .contact-us-online-box {
+      margin-left: calc(94% - 532px);
+    }
+    h2 {
+      span {
+        background: url('/images/contact-us/conatct-heading-bg-1.svg') no-repeat center bottom 5px;
+      }
+      .cohort-text {
+        background: url('/images/contact-us/conatct-heading-bg-2.svg') no-repeat center bottom 5px;
+      }
+    }
+  }
+  .contact-online-right {
+    background: linear-gradient(299.82deg, #dce4ff 22.75%, #ffe8c5 90.27%);
+    .meet-image {
+      max-width: 100%;
+    }
+  }
+}
+.contact-form-section {
+  .transform-box {
+    background: linear-gradient(273.73deg, #002ccd 7.33%, #000825 95.52%);
+    button {
+      transition: 0.2s all;
+      &:hover {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .contact-online-course {
+    .contact-online-left {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      .contact-us-online-box {
+        margin-left: calc(95% - 532px);
+      }
+    }
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .contact-online-course {
+    .contact-online-left {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      .contact-us-online-box {
+        margin-left: unset;
+      }
+    }
+  }
+  .transform-box {
+    ul {
+      flex-wrap: wrap;
+      min-height: unset !important;
+      margin-bottom: 1rem !important;
+      li {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        transform: unset !important;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .contact-banner {
+    h1 {
+      font-size: 32px;
+      line-height: 44px;
+      & ~ p {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+  .contact-skill-center {
+    h2 {
+      color: var(--label-color-1) !important;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .cotact-center-row {
+      margin-top: 0px;
+      .skill-cen-card {
+        h3 {
+          font-size: 24px;
+          line-height: 38px;
+        }
+        img {
+          width: 116px;
+        }
+        button,
+        li {
+          img {
+            width: auto;
+          }
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .contact-online-course {
+    .contact-online-left {
+      .contact-us-online-box {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      width: 100% !important;
+      .w-50 {
+        width: 100% !important;
+      }
+      br {
+        display: none;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 42px;
+        span {
+          line-height: 50px;
+        }
+      }
+    }
+  }
+  .contact-form-section {
+    h2 {
+      font-size: 32px;
+      line-height: 44px;
+      ~ p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .contact-form {
+      border-radius: 16px;
+      button {
+        font-size: 16px;
+        width: 100%;
+        max-width: 318px;
+      }
+      textarea {
+        min-height: 114px;
+      }
+    }
+    .transform-box {
+      .min-w-620 {
+        min-width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+.master-classes-slider {
+  .slick-list {
+    padding: 0 20% 0 0 !important;
+  }
+}
+
+.vertical-slider-track {
+  .slick-list {
+    padding: 30% 0 0 0 !important;
+  }
+}
+
+.slick-track-start {
+  .slick-track {
+    margin-left: unset;
+  }
+}
+
+.custom-arrows {
+  .custom-slick-button {
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+    box-shadow: none;
+    bottom: 33%;
+  }
+  .custom-prev-arrow {
+    transform: rotate(180deg);
+    z-index: 98;
+    left: -416px;
+    &:hover {
+      box-shadow: -3px -6px 0px 0px var(--label-color-1);
+    }
+  }
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    &:hover {
+      background-color: var(--label-color-3);
+      svg path {
+        stroke: var(--label-color-2);
+      }
+    }
+  }
+  .custom-next-arrow {
+    left: -340px;
+    &:hover {
+      box-shadow: -3px 6px 0px 0px var(--label-color-1);
+    }
+  }
+}
+
+.arrows-box {
+  .custom-slider-btn {
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+    box-shadow: none;
+  }
+  .custom-prev-btn {
+    transform: rotate(180deg);
+    &:hover {
+      box-shadow: -3px -6px 0px 0px var(--label-color-1);
+    }
+  }
+  .custom-prev-btn,
+  .custom-next-btn {
+    &:hover {
+      background-color: var(--label-color-3);
+      svg path {
+        stroke: var(--label-color-2);
+      }
+    }
+  }
+  .custom-next-btn {
+    &:hover {
+      box-shadow: -3px 6px 0px 0px var(--label-color-1);
+    }
+  }
+}
+
+.slider-with-dots {
+  .slick-dots {
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    li,
+    button,
+    li button:before {
+      width: 6px;
+      height: 6px;
+    }
+    li {
+      margin: 0 8px;
+      button {
+        width: 6px;
+        height: 6px;
+        cursor: pointer;
+        &::before {
+          opacity: 50%;
+          content: '' !important;
+          width: 6px;
+          height: 6px;
+          border-radius: 50% !important;
+          background: #194cff;
+        }
+      }
+    }
+    .slick-active {
+      transition: all 0.3s ease-in-out;
+      button {
+        width: 100%;
+        &::before {
+          width: 14px;
+          height: 14px;
+          transform: translate(-4px, -4px);
+          opacity: 1;
+          background: var(--label-color-3) !important;
+        }
+      }
+    }
+  }
+}
+
+.custom-review-dots {
+  bottom: -58px !important;
+  text-align: start !important;
+  li {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .crs-st-img img {
+    border: 1px solid transparent;
+    transition: 0.2s all;
+    mix-blend-mode: luminosity;
+  }
+  .slick-active {
+    .crs-st-img img {
+      border-color: var(--label-color-1);
+      box-shadow: 2px 2px 0px 0px var(--label-color-1);
+      mix-blend-mode: unset;
+    }
+  }
+}
+
+.mentor-right-side {
+  .slider-with-dots {
+    .slick-dots {
+      bottom: -10px;
+    }
+  }
+}
+
+.white-dots {
+  .slick-dots {
+    li {
+      button {
+        &::before {
+          border-radius: 50% !important;
+          background: #ffffff;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        &::before {
+          opacity: 1;
+          background: var(--label-color-2) !important;
+        }
+      }
+    }
+  }
+}
+
+.custom-arrow-postion {
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    top: -11.9rem !important;
+    right: 7% !important;
+    left: unset !important;
+  }
+  .custom-next-arrow {
+    right: 0% !important;
+  }
+}
+
+.centers-course-arrow {
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    top: -7.8rem !important;
+  }
+}
+
+// center detials arrows
+
+.product-companies-arrow {
+  .custom-slick-button {
+    bottom: 45%;
+    width: 44px;
+    height: 44px;
+    svg {
+      width: 16px;
+      height: 14px;
+    }
+  }
+  .custom-prev-arrow {
+    left: -63px;
+  }
+  .custom-next-arrow {
+    left: unset;
+    right: -63px;
+  }
+}
+
+.portfolio-arrows {
+  .custom-slick-button {
+    width: 40px;
+    height: 40px;
+  }
+  .custom-prev-arrow {
+    left: -20px;
+  }
+  .custom-next-arrow {
+    left: unset;
+    right: -20px;
+  }
+  .slick-dots {
+    bottom: -30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .testmonial-slider-track {
+    .slick-list {
+      padding: 0 0 0 0 !important;
+    }
+  }
+}

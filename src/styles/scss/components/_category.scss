@@ -1,0 +1,389 @@
+.course-category-section {
+  background: url('/images/categories/category-banner-bg.svg') no-repeat center,
+    linear-gradient(252.34deg, #dae2ff 21.79%, #fafbff 72.24%, #e9eeff 94.44%);
+  .category-feature-icon {
+    border: 1px solid #e5e7eb;
+  }
+  .category-banner-right {
+    p {
+      span {
+        background: url('/images/categories/learners-text-bg.svg') center top no-repeat;
+        border-radius: 20px;
+        &::before {
+          display: block;
+          position: absolute;
+          width: 23px;
+          height: 32px;
+          content: '';
+          background: url('/images/categories/learners-before.svg') no-repeat;
+          left: -27px;
+          top: 3px;
+        }
+      }
+    }
+    .learners-placed-row {
+      .place-card {
+        max-width: 112px;
+        min-height: 144px;
+        max-height: 144px;
+        background: #fff5e6;
+        box-shadow: 0px 2px 3px 0px #ffffff inset;
+      }
+    }
+    .job-numbers-card {
+      max-width: 168px;
+      min-height: 144px;
+      max-height: 144px;
+      background: url('/images/categories/learner-job-numbers-bg.svg') no-repeat top center;
+    }
+  }
+}
+.regular-course-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  .path-categor-list {
+    top: 0 !important;
+  }
+  .explore-crs-card {
+    top: 0 !important;
+  }
+}
+.readiness-program {
+  background-color: #49ce7f;
+  border-radius: 20px 0px 0px 20px;
+  height: 37px;
+  top: 23px;
+}
+.why-study-section {
+  background: linear-gradient(97.91deg, #002ccd 7.06%, #000825 98.51%);
+  .color-l-white {
+    color: #96acf6;
+  }
+  .why-study-content {
+    ul {
+      li {
+        min-width: 32px;
+        max-width: 32px;
+        min-height: 32px;
+        max-height: 32px;
+        &.active {
+          min-width: 40px;
+          max-width: 40px;
+          min-height: 40px;
+          max-height: 40px;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+}
+.meet-mentors-section {
+  .meet-mentors-list {
+    .meet-mentor-card {
+      a {
+        top: 10px;
+        right: 10px;
+        z-index: 9;
+      }
+    }
+  }
+}
+.cat-jobs-section {
+  background-color: #f5f7ff;
+  .job-target-box {
+    background: url('/images/categories/jobs-bg.png') center bottom no-repeat,
+      linear-gradient(180deg, #0c0c13 0%, #4068ff 100%);
+  }
+  .curr-job-slider {
+    .slick-track {
+      display: flex;
+      .curr-job-logo {
+        background-color: #f6f8ff;
+      }
+    }
+    .slick-dots li button::before {
+      background: #4068ff;
+    }
+    .slick-dots .slick-active button::before {
+      background: #4068ff !important;
+    }
+  }
+}
+
+.change-content-text {
+  span {
+    font-size: 25px;
+    line-height: 38px;
+    color: var(--label-color-24);
+    font-weight: 600;
+  }
+}
+.cat-master-class {
+  .category-master-class {
+    background: url('/images/categories/noise.png'), linear-gradient(139.39deg, #194cff 15.6%, #1636aa 92.55%);
+    background-blend-mode: lighten;
+    .master-mentor-bg {
+      background: url('/images/categories/mentore-bg-checks.svg') left top 15px no-repeat,
+        url('/images/categories/mentor-bg-layer.svg') no-repeat;
+      z-index: 8;
+    }
+    .mentor-title {
+      z-index: 10;
+      background: rgba(17, 24, 39, 0.3);
+      backdrop-filter: blur(7px);
+      border-radius: 0px 40px 40px 0px;
+      bottom: 30px;
+    }
+    .master-batch-time {
+      box-shadow: 4px 4px 0px 0px #fc9c03;
+    }
+    .enrolled-users {
+      .enrolled-user {
+        &:nth-child(2) {
+          transform: translateX(-10px);
+        }
+        &:nth-child(3) {
+          transform: translateX(-20px);
+        }
+      }
+    }
+  }
+}
+.category-reviews {
+  // background-color: #f5f7ff;
+  .home-st-reviews {
+    padding-top: 108px;
+  }
+}
+@media (max-width: 1400px) {
+  .course-category-section {
+    .cat-banner-text {
+      font-size: 16px;
+    }
+    .cat-banner-features {
+      p {
+        font-size: 20px;
+      }
+      span {
+        font-size: 13px;
+      }
+      img {
+        width: 24px;
+      }
+    }
+    .category-banner-right {
+      // p {
+      //   font-size: 22px;
+      //   span {
+      //     font-size: 14px;
+      //   }
+      // }
+      .job-numbers-card {
+        max-width: 150px;
+        min-height: 150px;
+        max-height: 150px;
+      }
+      .learners-placed-row {
+        .place-card {
+          max-width: 115px;
+          min-height: 150px;
+          max-height: 150px;
+        }
+      }
+    }
+    .learners-placed-row {
+      p {
+        font-size: 16px;
+      }
+      span {
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media (max-width: 1299px) {
+  .cat-master-class {
+    .category-master-class {
+      h3 {
+        font-size: 28px;
+      }
+    }
+  }
+  .category-banner-left {
+    margin: 0 auto 50px;
+    // .cat-banner-heading {
+    //   justify-content: center;
+    // }
+  }
+}
+@media (max-width: 991px) {
+  .course-category-section {
+    h1 {
+      font-size: 32px;
+      line-height: 44px;
+    }
+    .cat-banner-text {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .cat-banner-features {
+      .category-feature-icon {
+        background-color: transparent !important;
+        border: 0;
+        width: auto;
+        height: auto;
+      }
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      span {
+        line-height: 16px;
+        font-size: 12px;
+      }
+      img {
+        margin-bottom: 10px;
+        width: 27px;
+      }
+    }
+    .max-w-2xl-567 {
+      margin: auto;
+    }
+    .category-banner-right {
+      .learners-placed-row {
+        .place-card {
+          min-width: 104px;
+          max-width: 104px;
+          min-height: 136px;
+          max-height: 136px;
+          img {
+            width: 80px;
+            height: 80px;
+          }
+          .text-center {
+            img {
+              width: 65px;
+              height: 20px;
+            }
+          }
+        }
+        .job-numbers-card {
+          min-width: 134px;
+          max-width: 134px;
+          min-height: 136px;
+          max-height: 136px;
+          p {
+            font-size: 14px;
+            line-height: 22px;
+          }
+          span {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+  .why-study-section {
+    background: url('/images/categories/noise.png'), linear-gradient(180deg, #002ccd 0%, #000825 100%);
+    background-blend-mode: overlay;
+    h3 {
+      font-size: 16px;
+      ~ p {
+        font-size: 14px;
+        span {
+          font-size: 25px;
+        }
+      }
+    }
+    .why-study-content {
+      .slider-container {
+        .slider-content {
+          p {
+            font-size: 18px;
+            font-weight: 400;
+          }
+          span {
+            font-size: 14px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  .meet-mentors-section {
+    .meet-mentors-list {
+      overflow-x: auto;
+      .mentore-box-wrapper {
+        min-width: 150px;
+      }
+      h3 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      P {
+        font-size: 14px;
+        line-height: 21px;
+      }
+      a {
+        ~ img {
+          min-width: 150px;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+  .cat-jobs-section {
+    .job-target-box {
+      h3 {
+        font-size: 18px;
+      }
+      .rfm-child {
+        .rounded-40 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .regular-course-section {
+    .explore-crs-card {
+      position: relative !important;
+    }
+  }
+  .readiness-program {
+    z-index: 9;
+  }
+  .cat-jobs-section,
+  .cat-master-class,
+  .meet-mentors-section,
+  .regular-course-section,
+  .why-study-section,
+  .category-reviews {
+    h2 {
+      font-size: 32px;
+      line-height: 44px;
+      ~ p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

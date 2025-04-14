@@ -1,0 +1,35 @@
+.thank-you-event-banner {
+  background: url('/images/master-class/master-banner-checks.svg') no-repeat center,
+    url('/images/categories/noise.png') repeat, linear-gradient(256.99deg, #002ccd 19.72%, #000825 97.05%),
+    linear-gradient(180deg, #0834d8 0%, rgba(25, 76, 255, 0) 100%);
+  background-blend-mode: color-dodge;
+}
+.thank-you-detail-section {
+  .event-details-box {
+    background: url('/images/master-class/lines-vertical.png');
+    background-color: #fff5e6;
+    background-blend-mode: multiply;
+    transform: translateY(-80px);
+    margin-bottom: -80px;
+  }
+}
+@media (max-width: 991px) {
+  .thank-you-detail-section {
+    .event-details-box {
+      transform: unset;
+      margin-bottom: 0;
+      h2 {
+        line-height: 32px;
+      }
+    }
+    .event-mentor-thank-you {
+      min-width: 100px;
+      max-width: 100px;
+      min-height: 100px;
+      max-height: 100px;
+    }
+    .center-content-event {
+      margin: 0 auto;
+    }
+  }
+}

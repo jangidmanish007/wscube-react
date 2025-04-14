@@ -1,0 +1,104 @@
+.progress-bar-box {
+  .progress {
+    height: 4px;
+    border-radius: 4px;
+    background: #d9d9d9;
+    .progress-bar {
+      background: var(--label-color-3);
+    }
+  }
+}
+.custom-check-radio-1 {
+  width: 16px;
+  height: 16px;
+  // margin-top: 0;
+  border: 1px solid var(--label-color-28);
+  cursor: pointer;
+  &:checked[type='radio'] {
+    background-image: url('/images/icons/checked-orange.svg') !important;
+    --bs-form-check-bg-image: url('/images/icons/checked-orange.svg') !important;
+    background-size: 10px 10px !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+  }
+  &:checked {
+    background-color: var(--label-color-2) !important;
+    border-color: var(--label-color-24) !important;
+  }
+  &:focus {
+    border-color: var(--label-color-24) !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+.custom-radio-btn-2 {
+}
+
+.custom-label-2 {
+  border: 2px solid #11182733;
+}
+
+.custom-check-radio-1:checked + .custom-label {
+  color: var(--label-color-1);
+}
+
+.custom-radio-btn-2:checked + .custom-label-2 {
+  background: #fee0b1;
+  border: 2px solid #fc9c03;
+  color: var(--label-color-1);
+}
+.resize-icon::-webkit-resizer {
+  // margin-right: 4px;
+  display: none;
+}
+
+.textarea-resize-icon {
+  position: relative;
+  &:before {
+    content: '';
+    width: 17px;
+    height: 14px;
+    position: absolute;
+    bottom: 11px;
+    right: 4px;
+    background: url('/images/icons/resize-icon.svg') no-repeat center center / contain;
+  }
+}
+.login-prompt-backdrop,
+.apply-auth-backdrop {
+  backdrop-filter: blur(20px) !important; /* Add blur effect */
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+// .doc-modal {
+//   .reactEasyCrop_CropArea {
+//     width: 400px !important;
+//     height: 200px !important;
+//   }
+//   .reactEasyCrop_Contain {
+//     min-width: 400px !important;
+//     height: auto !important;
+//   }
+// }
+.apply-now-otp {
+  input {
+    &::placeholder {
+      opacity: 0.3 !important;
+      font-weight: 400 !important;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .thank-you-video-wrapper {
+    video {
+      height: 277px;
+    }
+  }
+  .crop-container {
+    min-width: 300px !important;
+  }
+  .doc-popover {
+    min-width: 300px !important;
+    max-width: 300px !important;
+  }
+}

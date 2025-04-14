@@ -1,0 +1,32 @@
+.common-box-shadow-2 {
+  box-shadow: var(--common-hover-shadow-2);
+}
+
+.common-box-shadow {
+  box-shadow: var(--common-hover-shadow);
+}
+
+.hover-shadow-3 {
+  &:hover {
+    box-shadow: var(--common-hover-shadow-3);
+  }
+}
+
+.transation-1 {
+  transition: all 0.1s;
+}
+
+.transation-2 {
+  transition: all 0.2s;
+}
+
+.transation-3 {
+  transition: all 0.3s;
+}
+
+.hover-shadow-none {
+  &:hover {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+  }
+}

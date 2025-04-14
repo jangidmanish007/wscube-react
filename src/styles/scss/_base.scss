@@ -1,0 +1,1037 @@
+body,
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif !important;
+  // font-family: 'Bricolage Grotesque', sans-serif;
+}
+// .inter-font {
+//   font-family: 'Inter', sans-serif;
+// }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #00000033;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.wrapperr {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.grid {
+  display: grid;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+// Generate label color and bg color classes and also for border
+$labelColors: (
+  1: var(--label-color-1),
+  2: var(--label-color-2),
+  3: var(--label-color-3),
+  4: var(--label-color-4),
+  5: var(--label-color-5),
+  6: var(--label-color-6),
+  7: var(--label-color-7),
+  8: var(--label-color-8),
+  9: var(--label-color-9),
+  10: var(--label-color-10),
+  11: var(--label-color-11),
+  12: var(--label-color-12),
+  13: var(--label-color-13),
+  14: var(--label-color-14),
+  15: var(--label-color-15),
+  16: var(--label-color-16),
+  17: var(--label-color-17),
+  18: var(--label-color-18),
+  19: var(--label-color-19),
+  20: var(--label-color-20),
+  21: var(--label-color-21),
+  22: var(--label-color-22),
+  23: var(--label-color-23),
+  24: var(--label-color-24),
+  25: var(--label-color-25),
+  26: var(--label-color-26),
+  27: var(--label-color-27),
+  28: var(--label-color-28),
+  29: var(--label-color-29),
+  30: var(--label-color-30),
+  31: var(--label-color-31),
+  32: var(--label-color-32),
+  33: var(--label-color-33),
+  34: var(--label-color-34),
+  35: var(--label-color-35),
+  36: var(--label-color-36),
+  37: var(--label-color-37),
+  38: var(--label-color-38),
+  39: var(--label-color-39),
+  40: var(--label-color-40),
+  41: var(--label-color-41),
+  42: var(--label-color-42),
+  43: var(--label-color-43),
+  44: var(--label-color-44),
+  45: var(--label-color-45),
+);
+
+$borderWidths: (
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  6: 6px,
+  8: 8px,
+);
+
+$borderStyles: (solid, dashed, dotted, double);
+
+.border-w {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--label-color-1);
+}
+
+.scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.outline-none {
+  outline: 0;
+}
+
+.w-max-content {
+  width: max-content;
+}
+
+.h-max-content {
+  height: max-content;
+}
+
+// Box Shadow
+.card-shadow-2 {
+  box-shadow: 2px 2px 0px 0px var(--label-color-1);
+}
+.card-shadow-4 {
+  box-shadow: 4px 4px 0px 0px var(--label-color-1);
+}
+.card-shadow-6 {
+  box-shadow: 6px 6px 0px 0px var(--label-color-1);
+}
+
+.hover-shadow-2 {
+  transition: 0.2s all;
+  &:hover {
+    box-shadow: 2px 2px 0px 0px var(--label-color-1);
+  }
+}
+
+.hover-shadow-4 {
+  transition: 0.2s all;
+  &:hover {
+    box-shadow: 4px 4px 0px 0px var(--label-color-1);
+  }
+}
+
+.hover-shadow-6 {
+  transition: 0.2s all;
+  &:hover {
+    box-shadow: 6px 6px 0px 0px var(--label-color-1);
+  }
+}
+
+.reverse-shadow-2 {
+  transition: 0.2s all;
+  box-shadow: 2px 2px 0px 0px var(--label-color-1);
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.reverse-shadow-4 {
+  transition: 0.2s all;
+  box-shadow: 4px 4px 0px 0px var(--label-color-1);
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.reverse-shadow-6 {
+  transition: 0.2s all;
+  box-shadow: 6px 6px 0px 0px var(--label-color-1);
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+@each $style in $borderStyles {
+  .border-#{$style} {
+    border-style: $style !important;
+  }
+}
+
+@each $widthKey, $widthValue in $borderWidths {
+  .border-w-#{$widthKey} {
+    border-width: $widthValue;
+    border-style: solid;
+    border-color: var(--label-color-1);
+  }
+}
+
+@each $key, $value in $labelColors {
+  .text-color-#{$key} {
+    color: $value;
+  }
+  .bg-color-#{$key} {
+    background-color: $value;
+  }
+
+  // Border color classes
+  .border-color-#{$key} {
+    border-color: $value;
+  }
+
+  // Border color classes for specific sides
+  .border-color-#{$key}-x {
+    border-right-color: $value !important;
+    border-left-color: $value !important;
+  }
+
+  .border-color-#{$key}-y {
+    border-top-color: $value !important;
+    border-bottom-color: $value !important;
+  }
+
+  .border-color-#{$key}-right {
+    border-right-color: $value !important;
+  }
+
+  .border-color-#{$key}-left {
+    border-left-color: $value !important;
+  }
+
+  .border-color-#{$key}-top {
+    border-top-color: $value !important;
+  }
+
+  .border-color-#{$key}-bottom {
+    border-bottom-color: $value !important;
+  }
+}
+
+// font size function
+$fontSizeStart: 1;
+$fontSizeEnd: 100;
+
+@for $i from $fontSizeStart through $fontSizeEnd {
+  $remSize: $i / 16;
+  .fs-#{$i} {
+    font-size: #{$remSize}rem;
+  }
+}
+
+//  font weight function
+$fontWeight: 300 400 500 600 700;
+
+@each $fontWeight in $fontWeight {
+  .fw-#{$fontWeight} {
+    font-weight: #{$fontWeight};
+  }
+}
+
+// line height function
+$lineHightsStart: 10;
+$lineHightsEnd: 100;
+
+@for $i from $lineHightsStart through $lineHightsEnd {
+  $remSize: $i / 16;
+  .lh-#{$i} {
+    line-height: #{$remSize}rem;
+  }
+}
+
+// Width and height size function
+$customStart: 0;
+$customEnd: 1600;
+
+@for $i from $customStart through $customEnd {
+  $remSize: $i / 16;
+  // for width
+  .max-w-#{$i} {
+    max-width: #{$remSize}rem;
+  }
+  .min-w-#{$i} {
+    min-width: #{$remSize}rem;
+  }
+  .w-size-#{$i} {
+    width: #{$remSize}rem;
+  }
+}
+
+@for $i from $customStart through $customEnd {
+  $remSize: $i / 16;
+  // for width
+  .max-h-#{$i} {
+    max-height: #{$remSize}rem !important;
+  }
+  .min-h-#{$i} {
+    min-height: #{$remSize}rem !important;
+  }
+  .h-size-#{$i} {
+    height: #{$remSize}rem;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+
+// for grid columns function
+$gridColumns: (
+  2: repeat(2, minmax(0, 1fr)),
+  3: repeat(3, minmax(0, 1fr)),
+  4: repeat(4, minmax(0, 1fr)),
+  5: repeat(5, minmax(0, 1fr)),
+  6: repeat(6, minmax(0, 1fr)),
+  7: repeat(7, minmax(0, 1fr)),
+  8: repeat(8, minmax(0, 1fr)),
+  // Add more column configurations as needed
+);
+
+@each $key, $value in $gridColumns {
+  .grid-cols-#{$key} {
+    grid-template-columns: $value;
+  }
+}
+
+// gap fucntion for grid function
+$gapStart: 6;
+$gapEnd: 150;
+
+@for $i from $gapStart through $gapEnd {
+  $remSize: $i / 16;
+  .grid-gap-#{$i} {
+    gap: #{$remSize}rem;
+  }
+}
+
+// padding function
+$paddingStart: 0;
+$paddingEnd: 400;
+
+@for $i from $paddingStart through $paddingEnd {
+  $remSize: $i / 16;
+  // for padding function
+
+  .px-#{$i} {
+    padding-left: #{$remSize}rem;
+    padding-right: #{$remSize}rem;
+  }
+  .py-#{$i} {
+    padding-top: #{$remSize}rem;
+    padding-bottom: #{$remSize}rem;
+  }
+  .pt-#{$i} {
+    padding-top: #{$remSize}rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$remSize}rem;
+  }
+  .pl-#{$i} {
+    padding-left: #{$remSize}rem;
+  }
+  .pr-#{$i} {
+    padding-right: #{$remSize}rem;
+  }
+  .p-#{$i} {
+    padding-top: #{$remSize}rem;
+    padding-right: #{$remSize}rem;
+    padding-bottom: #{$remSize}rem;
+    padding-left: #{$remSize}rem;
+  }
+  // for margin function
+  .m-#{$i} {
+    margin-top: #{$remSize}rem;
+    margin-right: #{$remSize}rem;
+    margin-bottom: #{$remSize}rem;
+    margin-left: #{$remSize}rem;
+  }
+  .mx-#{$i} {
+    margin-left: #{$remSize}rem;
+    margin-right: #{$remSize}rem;
+  }
+  .my-#{$i} {
+    margin-top: #{$remSize}rem;
+    margin-bottom: #{$remSize}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$remSize}rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$remSize}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$remSize}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$remSize}rem;
+  }
+}
+
+// border redius for mobile
+$borderReduisStart: 0;
+$borderReduisEnd: 100;
+
+@for $i from $borderReduisStart through $borderReduisEnd {
+  $remSize: $i / 16;
+  .rounded-#{$i} {
+    border-radius: #{$remSize}rem;
+  }
+  .rounded-t-#{$i} {
+    border-top-right-radius: #{$remSize}rem;
+    border-top-left-radius: #{$remSize}rem;
+  }
+  .rounded-b-#{$i} {
+    border-bottom-right-radius: #{$remSize}rem;
+    border-bottom-left-radius: #{$remSize}rem;
+  }
+  .rounded-tr-#{$i} {
+    border-top-right-radius: #{$remSize}rem;
+  }
+  .rounded-tl-#{$i} {
+    border-top-left-radius: #{$remSize}rem;
+  }
+  .rounded-bl-#{$i} {
+    border-bottom-left-radius: #{$remSize}rem;
+  }
+  .rounded-br-#{$i} {
+    border-bottom-right-radius: #{$remSize}rem;
+  }
+}
+
+//  for line clamp
+$linesStart: 1;
+$linesEnd: 7;
+
+@mixin line-clamp($lines: 1) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  text-overflow: ellipsis;
+}
+
+// Define range for the number of lines
+
+// Generate classes for text truncation with different line limits
+@for $i from $linesStart through $linesEnd {
+  .line-clamp-#{$i} {
+    @include line-clamp($i);
+  }
+}
+
+//  only text line overflow
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//  rotate transform function
+@mixin rotate($degree) {
+  transform: rotate(#{$degree}deg);
+}
+
+@for $i from 0 through 360 {
+  .rotate-#{$i} {
+    @include rotate($i);
+  }
+}
+
+//  for transation function
+$ease_functions: ease, ease-in, ease-out, ease-in-out;
+$duration_values: 0, 75, 100, 150, 200, 300, 500, 700, 1000;
+$transition_properties: all, color, background, height, width;
+
+@each $ease_function in $ease_functions {
+  @each $duration in $duration_values {
+    @each $property in $transition_properties {
+      // Construct the class name
+      $class_name: 'transition-#{$property}-#{$ease_function}-#{$duration}';
+
+      // Generate CSS rule for each class
+      .#{$class_name} {
+        transition: #{$property} #{$duration}ms $ease_function;
+      }
+    }
+  }
+}
+// Toast message
+.Toastify__toast--success {
+  background: #ffffff !important;
+  font-size: 14px !important;
+  color: var(--label-color-1) !important;
+  font-weight: 500 !important;
+  border-left: #00bf4b solid 5px !important;
+  box-shadow: rgb(0 0 0 / 25%) 0px 10px 40px !important;
+}
+.Toastify__close-button {
+  color: var(--label-color-1) !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  margin-top: 15px;
+}
+.Toastify__toast--error {
+  background: #ffffff !important;
+  border-left: #e74c3c solid 5px !important;
+  font-size: 14px !important;
+  color: var(--label-color-1) !important;
+  font-weight: 500 !important;
+  box-shadow: rgb(0 0 0 / 25%) 0px 10px 40px !important;
+}
+.Toastify__toast-container {
+  z-index: 99999999 !important;
+}
+.Toastify--animate-icon {
+  display: none !important;
+}
+.Toastify__close-button {
+  margin-top: 12px !important;
+}
+
+@media (min-width: 576px) {
+  //  for grid column
+  @each $key, $value in $gridColumns {
+    .grid-sm-cols-#{$key} {
+      grid-template-columns: $value;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  //  for grid column
+  @each $key, $value in $gridColumns {
+    .grid-md-cols-#{$key} {
+      grid-template-columns: $value;
+    }
+  }
+
+  //  for grid gap
+  @for $i from $gapStart through $gapEnd {
+    $remSize: $i / 16;
+    .grid-gap-md-#{$i} {
+      gap: #{$remSize}rem;
+    }
+  }
+  @for $i from $paddingStart through $paddingEnd {
+    $remSize: $i / 16;
+    // for padding function
+
+    .px-md-#{$i} {
+      padding-left: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+    }
+    .py-md-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+    }
+    .pt-md-#{$i} {
+      padding-top: #{$remSize}rem;
+    }
+    .pb-md-#{$i} {
+      padding-bottom: #{$remSize}rem;
+    }
+    .pl-md-#{$i} {
+      padding-left: #{$remSize}rem;
+    }
+    .pr-md-#{$i} {
+      padding-right: #{$remSize}rem;
+    }
+    .p-md-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+      padding-left: #{$remSize}rem;
+    }
+    // for margin function
+    .m-md-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+      margin-left: #{$remSize}rem;
+    }
+    .mx-md-#{$i} {
+      margin-left: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+    }
+    .my-md-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+    }
+    .mt-md-#{$i} {
+      margin-top: #{$remSize}rem;
+    }
+    .mb-md-#{$i} {
+      margin-bottom: #{$remSize}rem;
+    }
+    .ml-md-#{$i} {
+      margin-left: #{$remSize}rem;
+    }
+    .mr-md-#{$i} {
+      margin-right: #{$remSize}rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  // laptop screen
+  //  for grid column
+  @each $key, $value in $gridColumns {
+    .grid-lg-cols-#{$key} {
+      grid-template-columns: $value;
+    }
+  }
+  //  for font size
+  @for $i from $fontSizeStart through $fontSizeEnd {
+    $remSize: $i / 16;
+    .fs-lg-#{$i} {
+      font-size: #{$remSize}rem;
+    }
+  }
+  // font weight
+  @each $fontWeight in $fontWeight {
+    .fw-lg-#{$fontWeight} {
+      font-weight: #{$fontWeight};
+    }
+  }
+  //  for line height
+  @for $i from $lineHightsStart through $lineHightsEnd {
+    $remSize: $i / 16;
+    .lh-lg-#{$i} {
+      line-height: #{$remSize}rem;
+    }
+  }
+
+  // for width and height
+  @for $i from $customStart through $customEnd {
+    $remSize: $i / 16;
+    // for width
+    .max-w-lg-#{$i} {
+      max-width: #{$remSize}rem;
+    }
+    .min-w-lg-#{$i} {
+      min-width: #{$remSize}rem;
+    }
+    .w-size-lg-#{$i} {
+      width: #{$remSize}rem;
+    }
+  }
+  @for $i from $customStart through $customEnd {
+    $remSize: $i / 16;
+    // for height
+    .max-h-lg-#{$i} {
+      max-height: #{$remSize}rem;
+    }
+    .min-h-lg-#{$i} {
+      min-height: #{$remSize}rem;
+    }
+    .h-size-lg-#{$i} {
+      height: #{$remSize}rem;
+    }
+  }
+
+  //  for grid gap
+  @for $i from $gapStart through $gapEnd {
+    $remSize: $i / 16;
+    .grid-gap-lg-#{$i} {
+      gap: #{$remSize}rem;
+    }
+  }
+
+  //  for padding and margin
+  @for $i from $paddingStart through $paddingEnd {
+    $remSize: $i / 16;
+    // for padding function
+    .px-lg-#{$i} {
+      padding-left: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+    }
+    .py-lg-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+    }
+    .pt-lg-#{$i} {
+      padding-top: #{$remSize}rem;
+    }
+    .pb-lg-#{$i} {
+      padding-bottom: #{$remSize}rem;
+    }
+    .pl-lg-#{$i} {
+      padding-left: #{$remSize}rem;
+    }
+    .pr-lg-#{$i} {
+      padding-right: #{$remSize}rem;
+    }
+
+    .p-lg-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+      padding-left: #{$remSize}rem;
+    }
+
+    // for margin function
+    .m-lg-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+      margin-left: #{$remSize}rem;
+    }
+    .mx-lg-#{$i} {
+      margin-left: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+    }
+    .my-lg-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+    }
+    .mt-lg-#{$i} {
+      margin-top: #{$remSize}rem;
+    }
+    .mb-lg-#{$i} {
+      margin-bottom: #{$remSize}rem;
+    }
+    .ml-lg-#{$i} {
+      margin-left: #{$remSize}rem;
+    }
+    .mr-lg-#{$i} {
+      margin-right: #{$remSize}rem;
+    }
+  }
+  @for $i from $borderReduisStart through $borderReduisEnd {
+    $remSize: $i / 16;
+    .rounded-lg-#{$i} {
+      border-radius: #{$remSize}rem;
+    }
+    .rounded-t-lg-#{$i} {
+      border-top-right-radius: #{$remSize}rem;
+      border-top-left-radius: #{$remSize}rem;
+    }
+    .rounded-b-lg-#{$i} {
+      border-bottom-right-radius: #{$remSize}rem;
+      border-bottom-left-radius: #{$remSize}rem;
+    }
+    .rounded-tr-lg-#{$i} {
+      border-top-right-radius: #{$remSize}rem;
+    }
+    .rounded-tl-lg-#{$i} {
+      border-top-left-radius: #{$remSize}rem;
+    }
+    .rounded-bl-lg-#{$i} {
+      border-bottom-left-radius: #{$remSize}rem;
+    }
+    .rounded-br-lg-#{$i} {
+      border-bottom-left-radius: #{$remSize}rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  // laptop screen
+  // for grid column
+  @each $key, $value in $gridColumns {
+    .grid-xl-cols-#{$key} {
+      grid-template-columns: $value;
+    }
+  }
+
+  // for font size
+  @for $i from $fontSizeStart through $fontSizeEnd {
+    $remSize: $i / 16;
+    .fs-xl-#{$i} {
+      font-size: #{$remSize}rem;
+    }
+  }
+
+  // for font weight
+  @each $fontWeight in $fontWeight {
+    .fw-xl-#{$fontWeight} {
+      font-weight: #{$fontWeight};
+    }
+  }
+
+  // for line height
+  @for $i from $lineHightsStart through $lineHightsEnd {
+    $remSize: $i / 16;
+    .lh-xl-#{$i} {
+      line-height: #{$remSize}rem;
+    }
+  }
+
+  // for width and height
+  @for $i from $customStart through $customEnd {
+    $remSize: $i / 16;
+    // for width
+    .max-w-xl-#{$i} {
+      max-width: #{$remSize}rem;
+    }
+    .min-w-xl-#{$i} {
+      min-width: #{$remSize}rem;
+    }
+    .w-size-xl-#{$i} {
+      width: #{$remSize}rem;
+    }
+  }
+  @for $i from $customStart through $customEnd {
+    $remSize: $i / 16;
+    // for height
+    .max-h-xl-#{$i} {
+      max-height: #{$remSize}rem;
+    }
+    .min-h-xl-#{$i} {
+      min-height: #{$remSize}rem;
+    }
+    .h-size-xl-#{$i} {
+      height: #{$remSize}rem;
+    }
+  }
+
+  // for grid gap
+  @for $i from $gapStart through $gapEnd {
+    $remSize: $i / 16;
+    .grid-gap-xl-#{$i} {
+      gap: #{$remSize}rem;
+    }
+  }
+
+  // for paddig and margin
+  @for $i from $paddingStart through $paddingEnd {
+    $remSize: $i / 16;
+    // for padding function
+    .px-xl-#{$i} {
+      padding-left: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+    }
+    .py-xl-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+    }
+    .pt-xl-#{$i} {
+      padding-top: #{$remSize}rem;
+    }
+    .pb-xl-#{$i} {
+      padding-bottom: #{$remSize}rem;
+    }
+    .pl-xl-#{$i} {
+      padding-left: #{$remSize}rem;
+    }
+    .pr-xl-#{$i} {
+      padding-right: #{$remSize}rem;
+    }
+
+    .p-xl-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+      padding-left: #{$remSize}rem;
+    }
+
+    // for margin function
+    .m-xl-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+      margin-left: #{$remSize}rem;
+    }
+
+    .mx-xl-#{$i} {
+      margin-left: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+    }
+    .my-xl-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+    }
+    .mt-xl-#{$i} {
+      margin-top: #{$remSize}rem;
+    }
+    .mb-xl-#{$i} {
+      margin-bottom: #{$remSize}rem;
+    }
+    .ml-xl-#{$i} {
+      margin-left: #{$remSize}rem;
+    }
+    .mr-xl-#{$i} {
+      margin-right: #{$remSize}rem;
+    }
+  }
+  // for border redius
+  @for $i from $borderReduisStart through $borderReduisEnd {
+    $remSize: $i / 16;
+    .rounded-12-#{$i} {
+      border-radius: #{$remSize}rem;
+    }
+    .rounded-t-xl-#{$i} {
+      border-top-right-radius: #{$remSize}rem;
+      border-top-left-radius: #{$remSize}rem;
+    }
+    .rounded-b-xl-#{$i} {
+      border-bottom-right-radius: #{$remSize}rem;
+      border-bottom-left-radius: #{$remSize}rem;
+    }
+    .rounded-tr-xl-#{$i} {
+      border-top-right-radius: #{$remSize}rem;
+    }
+    .rounded-tl-xl-#{$i} {
+      border-top-left-radius: #{$remSize}rem;
+    }
+    .rounded-bl-xl-#{$i} {
+      border-bottom-left-radius: #{$remSize}rem;
+    }
+    .rounded-br-xl-#{$i} {
+      border-bottom-left-radius: #{$remSize}rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  // for width and height
+  @for $i from $customStart through $customEnd {
+    $remSize: $i / 16;
+    // for width
+    .max-w-2xl-#{$i} {
+      max-width: #{$remSize}rem;
+    }
+    .min-w-2xl-#{$i} {
+      min-width: #{$remSize}rem;
+    }
+    .w-size-2xl-#{$i} {
+      width: #{$remSize}rem;
+    }
+  }
+  @for $i from $customStart through $customEnd {
+    $remSize: $i / 16;
+    // for height
+    .max-h-2xl-#{$i} {
+      max-height: #{$remSize}rem;
+    }
+    .min-h-2xl-#{$i} {
+      min-height: #{$remSize}rem;
+    }
+    .h-size-2xl-#{$i} {
+      height: #{$remSize}rem;
+    }
+  }
+  @for $i from $paddingStart through $paddingEnd {
+    $remSize: $i / 16;
+    // for padding function
+
+    .px-2xl-#{$i} {
+      padding-left: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+    }
+    .py-2xl-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+    }
+    .pt-2xl-#{$i} {
+      padding-top: #{$remSize}rem;
+    }
+    .pb-2xl-#{$i} {
+      padding-bottom: #{$remSize}rem;
+    }
+    .pl-2xl-#{$i} {
+      padding-left: #{$remSize}rem;
+    }
+    .pr-2xl-#{$i} {
+      padding-right: #{$remSize}rem;
+    }
+    .p-2xl-#{$i} {
+      padding-top: #{$remSize}rem;
+      padding-right: #{$remSize}rem;
+      padding-bottom: #{$remSize}rem;
+      padding-left: #{$remSize}rem;
+    }
+    // for margin function
+    .m-2xl-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+      margin-left: #{$remSize}rem;
+    }
+    .mx-2xl-#{$i} {
+      margin-left: #{$remSize}rem;
+      margin-right: #{$remSize}rem;
+    }
+    .my-2xl-#{$i} {
+      margin-top: #{$remSize}rem;
+      margin-bottom: #{$remSize}rem;
+    }
+    .mt-2xl-#{$i} {
+      margin-top: #{$remSize}rem;
+    }
+    .mb-2xl-#{$i} {
+      margin-bottom: #{$remSize}rem;
+    }
+    .ml-2xl-#{$i} {
+      margin-left: #{$remSize}rem;
+    }
+    .mr-2xl-#{$i} {
+      margin-right: #{$remSize}rem;
+    }
+  }
+
+  @for $i from $fontSizeStart through $fontSizeEnd {
+    $remSize: $i / 16;
+    .fs-2xl-#{$i} {
+      font-size: #{$remSize}rem;
+    }
+  }
+
+  //  for line height
+  @for $i from $lineHightsStart through $lineHightsEnd {
+    $remSize: $i / 16;
+    .lh-2xl-#{$i} {
+      line-height: #{$remSize}rem;
+    }
+  }
+}

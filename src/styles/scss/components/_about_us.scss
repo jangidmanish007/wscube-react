@@ -1,0 +1,144 @@
+.about-us-banner-section {
+  background: url('/images/about-us/wscube-tech-team-img-2.webp') no-repeat center bottom -14rem;
+  background-size: 100%;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 10, 45, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.image-grident-layer {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 27.83%, #000000 100%);
+}
+
+.aboutus-header-grident {
+  background: linear-gradient(180deg, #0834d8 13.36%, rgba(8, 52, 216, 0) 92.12%);
+  opacity: 0.4;
+}
+
+.img-grident-layer-2 {
+  background: rgba(0, 0, 0, 0.2);
+}
+.industry-membership-card {
+  transition: all 0.3s ease-in-out;
+  background-image: url('/images/about-us/polygon-bg.svg');
+  background-position: top 20px right -20px;
+  background-size: 200px 264px;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url('/images/about-us/polygon-bg.svg');
+    background-position: top 10px right -20px;
+    background-size: 210px 274px;
+  }
+}
+
+.what-wscube-right-side {
+  margin-bottom: 40px !important;
+}
+
+.inpactful-number-wrapper {
+  background: url('/images/about-us/multi-polygon-bg-2.svg'), url('/images/about-us/multi-polygon-bg.svg'),
+    linear-gradient(273.73deg, #002ccd 7.33%, #000825 95.52%);
+  background-size: 300px, 300px, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top 10% left -5%, top 10% right 0%, center;
+  .impactful-cards-wrapper {
+    .impactful-number-card {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+        background-blend-mode: color-dodge;
+        width: 1px;
+        height: 100%;
+      }
+      &:nth-last-child(1) {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.founder-message-about-us {
+  background: url('/images/about-us/founder-bg-layer-5.svg') center / 70% no-repeat;
+}
+
+@media (max-width: 1600px) {
+  .about-us-banner-section {
+    background: url('/images/about-us/wscube-tech-team-img-2.webp') no-repeat center bottom -12rem;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .about-us-banner-section {
+    background: url('/images/about-us/wscube-tech-team-img-2.webp') no-repeat center;
+    background-size: 100%;
+  }
+  .founder-message-about-us {
+    background: url('/images/about-us/founder-bg-layer-5.svg') no-repeat left 0% top 0% / 100%;
+  }
+}
+@media (max-width: 1199px) {
+  .what-wscube-right-side {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .what-wscube-right-side {
+    margin-bottom: 20px !important;
+  }
+  .about-us-banner-section {
+    background: url('/images/about-us/wscube-tech-team-img-2.webp') no-repeat center bottom -5rem;
+    background-size: 100%;
+  }
+
+  .inpactful-number-wrapper {
+    background: linear-gradient(183.95deg, #012dce 1.76%, #010926 96.77%) no-repeat center;
+    .impactful-cards-wrapper {
+      .impactful-number-card {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  .founder-message-about-us {
+    background: unset;
+
+    .right-box {
+      .founder-msg-bg {
+        left: 50% !important;
+        top: -20% !important;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .about-us-banner-section {
+    background: url('/images/about-us/wscube-tech-team-img-2.webp') no-repeat center bottom -5rem;
+    background-size: 100%;
+  }
+  .impactful-number-card {
+    .card-content {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .about-us-banner-section {
+    background: url('/images/about-us/wscube-tech-team-img-2.webp') no-repeat center bottom 0rem;
+    background-size: cover;
+  }
+}

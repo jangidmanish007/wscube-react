@@ -1,0 +1,160 @@
+.footer-section {
+  .company-info {
+    p {
+      color: #e9f3fc;
+    }
+    .social-media-icon {
+      color: #e9f3fc;
+      border-color: #e9f3fc;
+    }
+  }
+  .footer-links-list {
+    ul {
+      li {
+        a {
+          color: #e9f3fc;
+        }
+      }
+    }
+  }
+  .courses-link-list {
+    li {
+      a,
+      span {
+        color: #e9f3fc;
+      }
+    }
+  }
+}
+.text-bottom-hover-effect {
+  li {
+    margin-bottom: 12px;
+    a {
+      display: inline-block;
+      padding-bottom: 1px;
+      background: linear-gradient(100deg, var(--label-color-2), var(--label-color-2)) no-repeat 100% 100%/0 0.0625rem;
+      transition: background-size 0.35s;
+      &:hover {
+        color: var(--label-color-2);
+        background-size: 100% 0.0625rem;
+        background-position-x: left;
+      }
+    }
+  }
+}
+
+.social-media-icon {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--label-color-2);
+  }
+  .linkdin-icon,
+  .fb-icon,
+  .youtube-icon {
+    svg {
+      transition: color 0.3s ease-in-out;
+      width: 18px;
+      height: 14px;
+      path {
+        fill: var(--label-color-2);
+      }
+    }
+  }
+  .twitter-icon {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      svg {
+        path {
+          fill: #1da1f2;
+        }
+      }
+    }
+  }
+  .linkdin-icon {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      svg {
+        path {
+          fill: #0077b5;
+        }
+      }
+    }
+  }
+  .fb-icon {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      svg {
+        path {
+          fill: #1877f2;
+        }
+      }
+    }
+  }
+  .youtube-icon {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      svg {
+        path {
+          fill: #ff0000;
+        }
+      }
+    }
+  }
+  .insta-icon {
+    transition: all 0.3s ease-in-out;
+    .hover-icon {
+      display: none;
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &:hover {
+      .white-icon {
+        display: none !important;
+      }
+      .hover-icon {
+        display: flex;
+      }
+    }
+  }
+}
+
+.courses-link-list {
+  .courses-name {
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--label-color-19);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-section {
+    .company-info {
+      p {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+    .footer-links-list {
+      span {
+        font-size: 20px;
+      }
+      ul {
+        li {
+          margin-bottom: 16px;
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .grid-gap-64 {
+      gap: 2rem;
+    }
+    .copyright-footer {
+      font-size: 11px;
+    }
+  }
+}

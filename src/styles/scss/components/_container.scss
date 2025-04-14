@@ -1,0 +1,91 @@
+// Width and height size function
+$customContainerStart: 0;
+$customContainerEnd: 2000;
+
+.container-w-full {
+  padding: 0px 16px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.container-main {
+  padding: 0px 16px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  // 540px
+  @for $i from $customContainerStart through $customContainerEnd {
+    .container-w-sm-#{$i} {
+      max-width: #{$i}px;
+    }
+  }
+  .container-main {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  // 720px
+  @for $i from $customContainerStart through $customContainerEnd {
+    .container-w-md-#{$i} {
+      max-width: #{$i}px;
+    }
+  }
+  .container-main {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  // 960px
+  @for $i from $customContainerStart through $customContainerEnd {
+    .container-w-lg-#{$i} {
+      max-width: #{$i}px;
+    }
+  }
+
+  .container-main {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  // 1140px
+  @for $i from $customContainerStart through $customContainerEnd {
+    .container-w-xl-#{$i} {
+      max-width: #{$i}px;
+    }
+  }
+  .banner-container {
+    max-width: 1224px;
+  }
+}
+
+@media (min-width: 1400px) {
+  // 1344px
+  @for $i from $customContainerStart through $customContainerEnd {
+    .container-w-2xl-#{$i} {
+      max-width: #{$i}px;
+    }
+  }
+  .banner-container {
+    max-width: 1424px;
+  }
+}
+
+@media (min-width: 1600px) {
+  @for $i from $customContainerStart through $customContainerEnd {
+    .container-w-3xl-#{$i} {
+      max-width: #{$i}px;
+    }
+  }
+  .banner-container {
+    max-width: 1624px;
+  }
+}

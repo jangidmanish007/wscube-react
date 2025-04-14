@@ -1,0 +1,145 @@
+.center-section {
+  background: #021028 url('/images/centers/center-section-bg.svg') no-repeat center;
+}
+
+.center-details-map {
+  iframe {
+    margin-bottom: -6px;
+  }
+}
+
+.new-enrolled-users {
+  .enrolled-user {
+    &:nth-child(2) {
+      transform: translateX(-10px);
+    }
+    &:nth-child(3) {
+      transform: translateX(-20px);
+    }
+  }
+}
+
+.experience-learning-section {
+  background: url('/images/centers/campus-galley-bg.svg') no-repeat center;
+}
+
+.campus-galley-card {
+  background: linear-gradient(248.95deg, #ffffff 3.09%, #d7d7d7 98.02%);
+  background-position: top right;
+}
+
+.common-list-style {
+  li {
+    &::before {
+      width: 18px;
+      height: 18px;
+      content: '';
+      position: absolute;
+      background: url('/images/master-class/yellow-check.svg') no-repeat;
+      background-size: contain;
+      left: 0;
+      top: 2px;
+      position: absolute;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.banner-list-styled {
+  ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    li {
+      margin-bottom: 16px;
+      min-width: 220px;
+      padding-left: 28px;
+      position: relative;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--label-color-2);
+      &:before {
+        background: url('/images/icons/checked-list-icon.svg') no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.sportlight-video-box {
+  background: conic-gradient(from 180deg at 50% 76.59%, #ffffff 0deg, #e6ebff 360deg, #e6ebff 360.04deg);
+}
+
+.bottom-heading-bg {
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 6px;
+    background: url('/images/centers/heading-bottom-border.svg') no-repeat;
+    background-size: contain;
+  }
+}
+.comparision-points {
+  li {
+    background: #3d68ff;
+    &:nth-child(odd) {
+      background: var(--label-color-3);
+    }
+  }
+}
+
+.education-comparision-wrapper {
+  .traditional-education-box {
+    transform: translateX(-8px);
+    border: 2px solid #d1d5db;
+  }
+  .wscube-tech-box {
+    .circle-bg {
+      background: #d0daff;
+    }
+    transform: translateX(-10px);
+    border: 4px solid #fc9c03;
+    ul {
+      li {
+        &:nth-child(odd) {
+          background: var(--label-color-19);
+        }
+      }
+    }
+  }
+}
+.link-hover {
+  transition: 0.2s all;
+  &:hover {
+    color: var(--label-color-3) !important;
+  }
+}
+@media (max-width: 991px) {
+  .center-top-section {
+    min-height: 72px !important;
+  }
+  .details-course-card {
+    min-height: 520px !important;
+  }
+  .map-box {
+    iframe {
+      width: 100% !important;
+      height: 300px !important;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .campus-card {
+    max-width: 140px;
+    min-width: 140px;
+    .card-padding {
+      padding: 0px !important;
+    }
+  }
+}
